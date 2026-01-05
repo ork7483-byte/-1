@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 | 고객지원 - 십분의일</title>
+    <meta name="description" content="십분의일에 프로젝트 문의를 남겨주세요.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            height: 200px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-transparent">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-fraction">
+                        <span class="num">1</span>
+                        <span class="slash"></span>
+                        <span class="den">10</span>
+                    </div>
+                </div>
+                <div class="nav-right-area">
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="greeting.html">회사소개</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="greeting.html">인사말</a></li>
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">사업분야</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="business_design1.html">사업분야 디자인 1</a></li>
+                                <li><a href="business_design2.html">사업분야 디자인 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">제품소개</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html">제품소개</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="notice.html">고객지원</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="news.html">뉴스</a></li>
+                                <li><a href="faq.html">자주묻는질문</a></li>
+                                <li><a href="contact.html">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="btn btn-primary"><span data-text="3초만에 문의하기">3초만에
+                                    문의하기</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sub Visual -->
+    <section class="sub-visual"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('sub_visual_bg_final.png'); height: 300px; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <div class="sub-title-box sub-visual-content">
+                <span class="sub-eyebrow">Customer Support</span>
+                <h2>고객지원</h2>
+                <div class="breadcrumb">
+                    <span>홈</span> <span style="margin: 0 5px;">·</span> <span>고객지원</span> <span
+                        style="margin: 0 5px;">·</span> <span class="current">문의하기</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="section-padding" style="background: white; padding: 120px 0;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center; margin-bottom: 60px;">
+                <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 20px;">무엇이든 물어보세요</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    십분의일에 궁금한 점이 있으시거나 프로젝트 의뢰가 필요하신가요?<br>
+                    아래 양식을 작성해주시면 담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.
+                </p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; background: #f9f9f9; padding: 60px; border-radius: 20px;">
+                <form action="#" method="POST" onsubmit="alert('문의가 접수되었습니다. 담당자 확인 후 연락드리겠습니다.'); return false;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="name">이름 (필수)</label>
+                            <input type="text" id="name" class="form-control" placeholder="홍길동" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company">회사명</label>
+                            <input type="text" id="company" class="form-control" placeholder="(주)십분의일">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">연락처 (필수)</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="010-1234-5678" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">이메일 (필수)</label>
+                            <input type="email" id="email" class="form-control" placeholder="example@email.com"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">문의내용</label>
+                        <textarea id="message" class="form-control" placeholder="문의하실 내용을 자유롭게 작성해주세요."
+                            required></textarea>
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 40px;">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy" style="font-size: 0.9rem; color: #666; cursor: pointer;">개인정보 수집 및 이용에
+                            동의합니다.</label>
+                    </div>
+                    <button type="submit" class="submit-btn" style="color: black;">문의하기</button>
+                    <!-- Button text color forced to black for contrast similar to style.css vars if needed, though usually primary bg has white text. Assuming primary is yellow/orange, black text might be better or white depending on contrast. I'll stick to style defaults but forced color for safety. -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="f-section">
+                        <h4>Address</h4>
+                        <p>서울특별시 00구 00동</p>
+                    </div>
+                    <div class="f-section">
+                        <h4>Contact</h4>
+                        <p>T. 010 1234 1234<br>F. 010 1234 1234</p>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="f-section">
+                        <h4>십분의일</h4>
+                        <p>대표: 안상언<br>사업자등록번호: 000-00-00000<br>주소: 서울특별시 00구 00동</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+                <div>
+                    <span>One-tenth. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="cursor-dot"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

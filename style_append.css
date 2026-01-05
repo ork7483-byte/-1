@@ -1,0 +1,37 @@
+/* Sub Visual Styles */
+.sub-visual-content .sub-eyebrow {
+    font-size: 1.2rem !important;
+    letter-spacing: 2px !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.sub-visual-content h2 {
+    font-size: 5rem !important;
+    /* Significantly larger */
+    font-weight: 800 !important;
+    margin: 0 0 30px 0 !important;
+    color: #FFFFFF !important;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.sub-visual-content .breadcrumb {
+    font-size: 1.1rem !important;
+    opacity: 0.7 !important;
+    font-weight: 400 !important;
+    color: #FFFFFF !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* Spacing between breadcrumb items */
+}
+
+/* Add dots between items if not present in HTML structure */
+.sub-visual-content .breadcrumb span+span::before {
+    /* content: '·';  Often handled in HTML, but can be done here */
+    /* margin-right: 15px; */
+}

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주묻는질문 | 고객지원 - 십분의일</title>
+    <meta name="description" content="십분의일 서비스에 대한 자주 묻는 질문입니다.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            padding: 0 10px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .faq-item:hover {
+            background-color: #fcfcfc;
+        }
+
+        .faq-question {
+            padding: 35px 0;
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #a0aab2;
+            /* Subtle bluish grey */
+            transition: all 0.3s;
+            letter-spacing: -0.5px;
+        }
+
+        .faq-item.active .faq-question {
+            color: #ffae00;
+            /* Perfect Orange */
+        }
+
+        .faq-question::after {
+            content: '+';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border: 2px solid #ced4da;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #a0aab2;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '\2212';
+            /* En Dash for a cleaner minus sign */
+            border-color: #ffae00;
+            color: #ffae00;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            padding-bottom: 0;
+            word-break: keep-all;
+            padding-right: 40px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-transparent">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-fraction">
+                        <span class="num">1</span>
+                        <span class="slash"></span>
+                        <span class="den">10</span>
+                    </div>
+                </div>
+                <div class="nav-right-area">
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="greeting.html">회사소개</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="greeting.html">인사말</a></li>
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">사업분야</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="business_design1.html">사업분야 디자인 1</a></li>
+                                <li><a href="business_design2.html">사업분야 디자인 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">제품소개</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html">제품소개</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="notice.html">고객지원</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="news.html">뉴스</a></li>
+                                <li><a href="faq.html">자주묻는질문</a></li>
+                                <li><a href="contact.html">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="btn btn-primary"><span data-text="3초만에 문의하기">3초만에
+                                    문의하기</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sub Visual -->
+    <section class="sub-visual"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('sub_visual_bg_final.png'); height: 300px; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <div class="sub-title-box sub-visual-content">
+                <span class="sub-eyebrow">Customer Support</span>
+                <h2>고객지원</h2>
+                <div class="breadcrumb">
+                    <span>홈</span> <span style="margin: 0 5px;">·</span> <span>고객지원</span> <span
+                        style="margin: 0 5px;">·</span> <span class="current">자주묻는질문</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content Section -->
+    <section id="faq-main-area" class="section-padding" style="background: white; padding: 120px 0;">
+        <div class="container">
+            <div style="display: flex; gap: 80px; align-items: flex-start;">
+                <!-- Left Column: Title -->
+                <div id="faq-title-col" style="flex: 0 0 300px;">
+                    <h3
+                        style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; word-break: keep-all; color: #111;">
+                        자주묻는 질문</h3>
+                    <p style="font-size: 1.1rem; color: #666;">궁금한 점이 있으신가요?</p>
+                </div>
+
+                <!-- Right Column: Accordion List -->
+                <div id="faq-list-col" style="flex: 1;">
+                    <div class="faq-item active">
+                        <div class="faq-question">코딩지식이 전혀 없어도 수정할 수 있나요?</div>
+                        <div class="faq-answer">
+                            네, 코딩 지식이 전혀 없는 분들도 손쉽게 문구와 이미지를 수정하실 수 있도록 메뉴얼을 제공하고 있습니다. 메뉴얼에는 영상도 담겨있으니 보시면서 그대로 따라하시면
+                            됩니다. 지금까지 구매하신 모든 분들이 저에게 따로 질문하지 않고 쉽게 수정하셨습니다.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">유지보수는 어떻게 되나요?</div>
+                        <div class="faq-answer">
+                            매달 돈을 내는 유지보수는 굳이 안하셔도 됩니다. 가끔 수정이 필요하실 때 저희에게 요청해주시면 처리해 드립니다. 그 외에 홈페이지 제작 후 따로 들어가는 비용은
+                            없습니다.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">커스터마이징이 뭔가요?</div>
+                        <div class="faq-answer">
+                            템플릿에 있는 페이지 외에 다른 페이지나 기능을 추가하고 싶을 경우 저희에게 요청하는 것을 말합니다.<br>
+                            템플릿을 기준으로 제작이 되며, 원하시는 페이지과 기능에 따라 견적은 달라집니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="f-section">
+                        <h4>Address</h4>
+                        <p>서울특별시 00구 00동</p>
+                    </div>
+                    <div class="f-section">
+                        <h4>Contact</h4>
+                        <p>T. 010 1234 1234<br>F. 010 1234 1234</p>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="f-section">
+                        <h4>십분의일</h4>
+                        <p>대표: 안상언<br>사업자등록번호: 000-00-00000<br>주소: 서울특별시 00구 00동</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+                <div>
+                    <span>One-tenth. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="cursor-dot"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
